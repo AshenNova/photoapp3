@@ -16,16 +16,16 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
- config.action_mailer.default_url_options = { host: 'ashennova-photoapp3.herkuapp.com'}
+ config.action_mailer.default_url_options = { host: 'ashennova-photoapp3.herokuapp.com'}
  config.action_mailer.delivery_method = :smtp
  config.action.mailer.perform_deliveries = true
  config.action_mailer.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
-    :port           => '587',
+    :port           => 587,
     :authentication => :plain,
     :user_name      => Rails.application.credentials[:sendgrid][:user_name],
     :password       => Rails.application.credentials[:sendgrid][:password],
-    :domain         => 'ashennova-photoapp3.herkuapp.com',
+    :domain         => 'ashennova-photoapp3.herokuapp.com',
     :enable_starttls_auto => true
 }
 
