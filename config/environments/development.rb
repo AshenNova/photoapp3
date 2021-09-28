@@ -11,6 +11,7 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+
   ActionMailer::Base.smtp_settings = {
     :address => 'smtp.sendgrid.net',
     :port => '587',
@@ -20,8 +21,8 @@ Rails.application.configure do
     :domain => 'heroku.com',
     :enable_starttls_auto => true
   }
-config.action_mailer.delivery_method :test
-config.action_mailer.default_url_options = { :host => 'localhost:3000'}
+  config.action_mailer.delivery_method :test
+  config.action_mailer.default_url_options = { :host => 'localhost:3000'}
 
   # Show full error reports.
   config.consider_all_requests_local = true
